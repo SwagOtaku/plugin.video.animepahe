@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+	<category label="General">
+		<setting id="reverseorder" type="labelenum" label="Episode order" values="Ascending|Descending" default="Descending"/>
+		<setting id="searchhistory" type="labelenum" label="Enable search history" values="Yes|No" default="Yes"/>
+
+		<setting type="lsep" label="UI"/>
+		<setting id="sep"/>
+		<setting id="contenttype.bool" label="Set content types" type="bool" default="false"/>
+		<setting id="contenttype.menu" type="labelenum" label="- Menu content type" values="addons|tvshows" default="tvshows" visible="eq(-1,true)"/>
+		<setting id="contenttype.seasons" type="labelenum" label="- Seasons content type" values="seasons|tvshows" default="tvshows" visible="eq(-2,true)"/>
+		<setting id="contenttype.episodes" type="labelenum" label="- Episodes content type" values="episodes|tvshows" default="tvshows" visible="eq(-3,true)"/>
+
+		<setting id="sep"/>
+		<setting id="viewtype.bool" label="Force view types" type="bool" default="false"/>
+		<setting id="viewtype.episode" type="select" label="- Episode view" values='Default|Poster|Icon Wall|Shift|Info Wall|Wide List|Wall|Banner|Fanart' default="Default" visible="eq(-1,true)"/>
+	</category>
+	<category label="Tools">
+		<setting id="tools.clear.cache" type="action" label="Click to Clear Cache..." option="close" action="RunPlugin(plugin://plugin.video.animepahe/clear_cache)"/>
+		<setting id="tools.clear.settings" type="action" label="Click to Clear Settings..." option="close" action="RunPlugin(plugin://plugin.video.animepahe/clear_settings)"/>
+	</category>
+	<category label="Watchlist">
+		<setting type="lsep" label="Select a watchlist"/>
+
+		<setting id="sep"/>
+		<setting id="anilist.bool" label="AniList" type="bool" default="false"/>
+		<setting id="anilist.name" type="text" label="- Username:" default="" visible="eq(-1,true)"/>
+		<setting id="anilist.login" type="action" label="- Click to Add..." option="close" action="RunPlugin(plugin://plugin.video.animepahe/watchlist_login/anilist)" visible="eq(-2,true)"/>
+		<setting id="anilist.listsettings" type="action" label="List settings..." option="close" visible="eq(-3,true)"/>
+		<setting id="anilist.sort" type="labelenum" label="- Sort by:" values="Score|Progress|Last Updated|Last Added" default="Progress" visible="eq(-4,true)"/>
+        	
+		<setting id="sep"/>
+		<setting id="kitsu.bool" label="Kitsu" type="bool" default="false"/>
+		<setting id="kitsu.name" type="text" label="- Email:" default="" visible="eq(-1,true)"/>
+    		<setting id="kitsu.password" type="text" option="hidden" label="- Password:" default="" visible="eq(-2,true)"/>
+		<setting id="kitsu.login" type="action" label="- Click to Login..." option="close" action="RunPlugin(plugin://plugin.video.animepahe/watchlist_login/kitsu)" visible="eq(-3,true)"/>
+		<setting id="kitsu.listsettings" type="action" label="List settings..." option="close" visible="eq(-4,true)"/>
+		<setting id="kitsu.sort" type="labelenum" label="- Sort by:" values="Date Updated|Progress|Title" default="Title" visible="eq(-5,true)"/>
+		<setting id="kitsu.titles" type="labelenum" label="- How titles will be displayed:" values="Canonical|Romanized|English" default="Canonical" visible="eq(-6,true)"/>
+
+		<setting id="sep"/>
+		<setting id="mal.bool" label="MyAnimeList" type="bool" default="false"/>
+    		<setting id="mal.name" type="text" label="- Username:" default="" visible="eq(-1,true)"/>
+    		<setting id="mal.password" type="text" option="hidden" label="- Password:" default="" visible="eq(-2,true)"/>
+		<setting id="mal.login" type="action" label="- Click to Login..." option="close" action="RunPlugin(plugin://plugin.video.animepahe/watchlist_login/mal)" visible="eq(-3,true)"/>
+		<setting id="mal.listsettings" type="action" label="List settings..." option="close" visible="eq(-4,true)"/>
+		<setting id="mal.sort" type="labelenum" label="- Sort by:" values="Last Updated|Progress|Anime Title" default="Anime Title" visible="eq(-5,true)"/>
+	</category>
+</settings>
